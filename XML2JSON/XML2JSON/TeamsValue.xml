@@ -1,0 +1,20 @@
+﻿<prop:GlobalProperties xmlns:bsd="http://www.biztalk360.com/alarms/notification/basetypes" xmlns="http://www.biztalk360.com/alarms/notification/basetypes" xmlns:prop="http://www.biztalk360.com/alarms/notification/properties">
+	<bsd:Section Name="teams-settings" DisplayName="Teams Settings">
+		<bsd:TextBox Name="Teams-Webhook" DisplayName="Teams WebHook Connector" IsMandatory="true" Disabled="false" Tooltip="Teams WebHook Connector " DefaultValue="" Type="text" MaxLength="3000" Value="https://outlook.office.com/webhook/0115fb63-f1a1-4697-bac7-8a511fd2ef2c@fa3c421e-2fde-4cf9-945d-62735cedcad2/IncomingWebhook/945e30cd88c84d28a9a89bbf25280946/45d4eddf-8edf-4a49-9f8c-7fc60052b2e4" />
+		<bsd:TextArea Name="Message-Card" DisplayName="Message Card Summary" IsMandatory="false" Disabled="false" DefaultValue="" Type="text" MaxLength="3000" Tooltip="Message Card Summary" Value="TEst1" />
+	</bsd:Section>
+	<bsd:Section Name="Notification-settings" DisplayName="Notification Settings">
+		<bsd:CheckBox Name="errors-warnings-only" DisplayName="Notify only Error(s) and Warning(s)" IsMandatory="true" DefaultValue="false" Disabled="false" Tooltip="Notify only Error(s) and Warning(s)" Value="false" />
+	</bsd:Section>
+	<bsd:Section Name="proxy-settings" DisplayName="Proxy Settings">
+		<bsd:CheckBox Name="use-proxy" DisplayName="Use Proxy" IsMandatory="true" DefaultValue="false" Disabled="false" Tooltip="Use Proxy" Value="false" />
+		<bsd:Group Name="proxy-settings-config" DisplayName="Proxy Settings" DependencyType="Enable" DependencyField="use-proxy">
+			<bsd:TextBox Name="server-name" DisplayName="Server Name" IsMandatory="false" Type="text" Disabled="false" Tooltip="Server Name" Value="" />
+			<bsd:TextBox Name="domain-name" DisplayName="Domain Name" IsMandatory="false" Type="text" Disabled="false" Tooltip="Domain Name" Value="" />
+			<bsd:TextBox Name="port-name" DisplayName="Port Name" IsMandatory="false" Type="text" Disabled="false" Tooltip="Port Name" Value="" />
+			<bsd:TextBox Name="user-name" DisplayName="User Name" IsMandatory="false" Type="text" Disabled="false" Tooltip="User Name" Value="" />
+			<bsd:TextBox Name="password" DisplayName="Password" IsMandatory="false" Type="password" Disabled="false" Tooltip="Password" Value="" />
+			<bsd:CheckBox Name="use-default-credentials" DisplayName="Use Default Credentials" DefaultValue="false" Disabled="false" Tooltip="Use Default Credentials" IsMandatory="false" Value="false" />
+		</bsd:Group>
+	</bsd:Section>
+</prop:GlobalProperties>
