@@ -1,0 +1,22 @@
+﻿<prop:GlobalProperties xmlns:bsd="http://www.biztalk360.com/alarms/notification/basetypes"
+                       xmlns="http://www.biztalk360.com/alarms/notification/basetypes"
+                       xmlns:prop="http://www.biztalk360.com/alarms/notification/properties">
+  <Section Name="teams-settings" DisplayName="Teams Settings">
+    <TextBox Name="Teams-Webhook" DisplayName="Teams WebHook Connector" IsMandatory="true" Disabled="false" Tooltip="Teams WebHook Connector " DefaultValue="" Type="text" MaxLength="3000" />
+    <TextArea Name="Message-Card" DisplayName="Message Card Summary" IsMandatory="false" Disabled="false" DefaultValue="" Type ="text" MaxLength="3000"/>
+  </Section>
+  <Section Name="Notification-settings" DisplayName="Notification Settings">
+    <CheckBox Name="errors-warnings-only" DisplayName="Notify only Error(s) and Warning(s)" IsMandatory="true"  DefaultValue="false" Disabled="false" />
+  </Section>
+    <Section Name="proxy-settings" DisplayName="Proxy Settings">
+      <CheckBox Name="use-proxy" DisplayName="Use Proxy" IsMandatory="true"  DefaultValue="false" Disabled="false" />
+      <Group Name="proxy-settings-config" DisplayName="Proxy Settings"  DependencyType="Enable" DependencyField="use-proxy">
+        <TextBox Name="server-name" DisplayName="Server Name" IsMandatory="false" Type="text" Disabled="false"/>
+        <TextBox Name="domain-name" DisplayName="Domain Name" IsMandatory="false"  Type="text" Disabled="false"/>
+        <TextBox Name="port-name" DisplayName="Port Name" IsMandatory="false" Type="text" Disabled="false"/>
+        <TextBox Name="user-name" DisplayName="User Name" IsMandatory="false" Type="text" Disabled="false"/>
+        <TextBox Name="password" DisplayName="Password" IsMandatory="false" Type="password" Disabled="false"/>
+        <CheckBox Name="use-default-credentials" DisplayName="Use Default Credentials" DefaultValue="false" Disabled="false"/>
+      </Group>
+    </Section>  
+</prop:GlobalProperties>

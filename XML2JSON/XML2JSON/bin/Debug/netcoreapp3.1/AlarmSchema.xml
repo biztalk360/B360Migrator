@@ -1,0 +1,7 @@
+﻿<prop:AlarmProperties xmlns="http://www.biztalk360.com/alarms/notification/basetypes" xmlns:prop="http://www.biztalk360.com/alarms/notification/properties"
+                      Name="slack-settings"
+                      DisplayName="Slack Settings">
+	<TextBox Name="user-name" DisplayName="User Name" IsMandatory="true" Value="" Tooltip="The User Name to post messages as..." DefaultValue="" Type="text" MaxLength="100" />
+	<TextBox Name="user-channel" DisplayName="Channel Name (with # before)" Value="" IsMandatory="true" Tooltip="The channel to post messages to... (ex: #general)" DefaultValue="" Type="text" MaxLength="100" />
+	<Label Name="slack-hint" DefaultValue="For more Details: https://api.slack.com/" For="slack-hint"/>
+</prop:AlarmProperties>
